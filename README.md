@@ -1,7 +1,7 @@
 # TrashEstimater
 Time Series Analayze With Trash Data
 
-![img](./img/heatmapexample.png)
+![img_heatmap](./img/heatmapexample.png)
 
 ## License  
 This repository is for portfolio purposes only.  
