@@ -22,6 +22,12 @@ center_lat, center_lon = df["Enlem"].mean(), df["Boylam"].mean()
 m = folium.Map(location=[center_lat, center_lon], zoom_start=14)
 
 # Isı haritası ekleme
+for index, row in df.iterrows():
+    folium.Marker(
+        location=[row["Enlem"], row["Boylam"]],
+        popup=f"Doluluk: {row['Kategori']}",
+        icon=folium.Icon(color="blue" if row["Kategori"] == "az" else "orange" if row["Kategori"] == "orta" else "red")
+    ).add_to(m)
 
 HeatMap(heat_data).add_to(m)
 
